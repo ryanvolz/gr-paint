@@ -40,6 +40,7 @@ requirements:
     - numpy
     - python
     # Add/remove runtime dependencies here
+    - pillow
 
 test:
   commands:
@@ -57,12 +58,12 @@ test:
     - if not exist %PREFIX%\\Library\\bin\\{{ name }}.dll exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\{{ name }}.lib exit 1  # [win]
 
-    ## verify that (some) GRC blocks get installed
-    #{% set blocks = ["LIST", "OF", "GRC", "BLOCK", "NAMES"] %}
-    #{% for block in blocks %}
-    #- test -f $PREFIX/share/gnuradio/grc/blocks/{{ block }}.block.yml  # [not win]
-    #- if not exist %PREFIX%\\Library\\share\\gnuradio\\grc\\blocks\\{{ block }}.block.yml exit 1  # [win]
-    #{% endfor %}
+    # verify that (some) GRC blocks get installed
+    {% set blocks = ["paint_image_source", "paint_paint_bc"] %}
+    {% for block in blocks %}
+    - test -f $PREFIX/share/gnuradio/grc/blocks/{{ block }}.block.yml  # [not win]
+    - if not exist %PREFIX%\\Library\\share\\gnuradio\\grc\\blocks\\{{ block }}.block.yml exit 1  # [win]
+    {% endfor %}
 
   imports:
     # verify that the python module imports
@@ -75,9 +76,15 @@ about:
   # of the license text file within the source directory, e.g. "LICENSE".
   # See https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#license-file
 
-  #home: https://github.com/<username>/gr-paint
-  #license: GPL-3.0-or-later
-  #license_file: COPYING
-  #summary: GNU Radio paint module
-  #description: >
-  #  Short description of the gr-paint module.
+  home: https://github.com/drmpeg/gr-paint
+  license: GPL-3.0-or-later
+  license_file: COPYING
+  summary: GNU Radio module for OFDM spectrum painting
+  description: >
+    The goal of this project is to build a software-defined OFDM transmitter
+    that "paints" monochrome images into the waterfall of a receiver.
+    It is based on https://github.com/polygon/spectrum_painter.
+
+    After installation, a GNU Radio block called "Spectrum Painter" will
+    be available in the "Paint" category. The block converts a byte stream
+    of image data into a 4K IFFT OFDM IQ sequence for transmission.
