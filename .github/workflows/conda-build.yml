@@ -13,166 +13,85 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - CONFIG: linux_64_gnuradio_extra_pin3.9.8python3.10.____cpython
-            SHORT_CONFIG: linux_64_gnuradio_extra_pin3.9.8pyt_h48ce78228a
+          - CONFIG: linux_64_python3.10.____cpython
+            SHORT_CONFIG: linux_64_python3.10.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_64_gnuradio_extra_pin3.9.8python3.8.____cpython
-            SHORT_CONFIG: linux_64_gnuradio_extra_pin3.9.8pyt_h7c42cb2dda
+          - CONFIG: linux_64_python3.8.____cpython
+            SHORT_CONFIG: linux_64_python3.8.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_64_gnuradio_extra_pin3.9.8python3.9.____cpython
-            SHORT_CONFIG: linux_64_gnuradio_extra_pin3.9.8pyt_h4505c06330
+          - CONFIG: linux_64_python3.9.____cpython
+            SHORT_CONFIG: linux_64_python3.9.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_64_gnuradio_extra_pinpython3.10.____cpython
-            SHORT_CONFIG: linux_64_gnuradio_extra_pinpython3._h4664416565
+          - CONFIG: linux_aarch64_python3.10.____cpython
+            SHORT_CONFIG: linux_aarch64_python3.10.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_64_gnuradio_extra_pinpython3.8.____cpython
-            SHORT_CONFIG: linux_64_gnuradio_extra_pinpython3.8.____cpython
+          - CONFIG: linux_aarch64_python3.8.____cpython
+            SHORT_CONFIG: linux_aarch64_python3.8.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_64_gnuradio_extra_pinpython3.9.____cpython
-            SHORT_CONFIG: linux_64_gnuradio_extra_pinpython3.9.____cpython
+          - CONFIG: linux_aarch64_python3.9.____cpython
+            SHORT_CONFIG: linux_aarch64_python3.9.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_aarch64_gnuradio_extra_pin3.9.8python3.10.____cpython
-            SHORT_CONFIG: linux_aarch64_gnuradio_extra_pin3.9_h7546ce17b5
+          - CONFIG: linux_ppc64le_python3.10.____cpython
+            SHORT_CONFIG: linux_ppc64le_python3.10.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_aarch64_gnuradio_extra_pin3.9.8python3.8.____cpython
-            SHORT_CONFIG: linux_aarch64_gnuradio_extra_pin3.9_h19a8a9b648
+          - CONFIG: linux_ppc64le_python3.8.____cpython
+            SHORT_CONFIG: linux_ppc64le_python3.8.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_aarch64_gnuradio_extra_pin3.9.8python3.9.____cpython
-            SHORT_CONFIG: linux_aarch64_gnuradio_extra_pin3.9_h63c034f685
+          - CONFIG: linux_ppc64le_python3.9.____cpython
+            SHORT_CONFIG: linux_ppc64le_python3.9.____cpython
             UPLOAD_PACKAGES: True
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
             os: ubuntu
-          - CONFIG: linux_aarch64_gnuradio_extra_pinpython3.10.____cpython
-            SHORT_CONFIG: linux_aarch64_gnuradio_extra_pinpyt_h62a685ff24
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_aarch64_gnuradio_extra_pinpython3.8.____cpython
-            SHORT_CONFIG: linux_aarch64_gnuradio_extra_pinpyt_h432bd9d10f
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_aarch64_gnuradio_extra_pinpython3.9.____cpython
-            SHORT_CONFIG: linux_aarch64_gnuradio_extra_pinpyt_h4f0896bc94
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_ppc64le_gnuradio_extra_pin3.9.8python3.10.____cpython
-            SHORT_CONFIG: linux_ppc64le_gnuradio_extra_pin3.9_hddcfaecd7b
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_ppc64le_gnuradio_extra_pin3.9.8python3.8.____cpython
-            SHORT_CONFIG: linux_ppc64le_gnuradio_extra_pin3.9_h61875a1577
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_ppc64le_gnuradio_extra_pin3.9.8python3.9.____cpython
-            SHORT_CONFIG: linux_ppc64le_gnuradio_extra_pin3.9_hfbe07d25ae
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_ppc64le_gnuradio_extra_pinpython3.10.____cpython
-            SHORT_CONFIG: linux_ppc64le_gnuradio_extra_pinpyt_h7cf4988e6f
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_ppc64le_gnuradio_extra_pinpython3.8.____cpython
-            SHORT_CONFIG: linux_ppc64le_gnuradio_extra_pinpyt_h48bca20d50
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: linux_ppc64le_gnuradio_extra_pinpython3.9.____cpython
-            SHORT_CONFIG: linux_ppc64le_gnuradio_extra_pinpyt_hd696a2d965
-            UPLOAD_PACKAGES: True
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-            os: ubuntu
-          - CONFIG: win_64_gnuradio_extra_pin3.9.8python3.10.____cpython
-            SHORT_CONFIG: win_64_gnuradio_extra_pin3.9.8pytho_habbc3e4282
+          - CONFIG: win_64_python3.10.____cpython
+            SHORT_CONFIG: win_64_python3.10.____cpython
             UPLOAD_PACKAGES: True
             os: windows
-          - CONFIG: win_64_gnuradio_extra_pin3.9.8python3.8.____cpython
-            SHORT_CONFIG: win_64_gnuradio_extra_pin3.9.8pytho_he86f3bb180
+          - CONFIG: win_64_python3.8.____cpython
+            SHORT_CONFIG: win_64_python3.8.____cpython
             UPLOAD_PACKAGES: True
             os: windows
-          - CONFIG: win_64_gnuradio_extra_pin3.9.8python3.9.____cpython
-            SHORT_CONFIG: win_64_gnuradio_extra_pin3.9.8pytho_h8f27477fe3
+          - CONFIG: win_64_python3.9.____cpython
+            SHORT_CONFIG: win_64_python3.9.____cpython
             UPLOAD_PACKAGES: True
             os: windows
-          - CONFIG: win_64_gnuradio_extra_pinpython3.10.____cpython
-            SHORT_CONFIG: win_64_gnuradio_extra_pinpython3.10.____cpython
-            UPLOAD_PACKAGES: True
-            os: windows
-          - CONFIG: win_64_gnuradio_extra_pinpython3.8.____cpython
-            SHORT_CONFIG: win_64_gnuradio_extra_pinpython3.8.____cpython
-            UPLOAD_PACKAGES: True
-            os: windows
-          - CONFIG: win_64_gnuradio_extra_pinpython3.9.____cpython
-            SHORT_CONFIG: win_64_gnuradio_extra_pinpython3.9.____cpython
-            UPLOAD_PACKAGES: True
-            os: windows
-          - CONFIG: osx_64_gnuradio_extra_pin3.9.8python3.10.____cpython
-            SHORT_CONFIG: osx_64_gnuradio_extra_pin3.9.8pytho_h5f4789f965
+          - CONFIG: osx_64_python3.10.____cpython
+            SHORT_CONFIG: osx_64_python3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos
-          - CONFIG: osx_64_gnuradio_extra_pin3.9.8python3.8.____cpython
-            SHORT_CONFIG: osx_64_gnuradio_extra_pin3.9.8pytho_hed2697ea68
+          - CONFIG: osx_64_python3.8.____cpython
+            SHORT_CONFIG: osx_64_python3.8.____cpython
             UPLOAD_PACKAGES: True
             os: macos
-          - CONFIG: osx_64_gnuradio_extra_pin3.9.8python3.9.____cpython
-            SHORT_CONFIG: osx_64_gnuradio_extra_pin3.9.8pytho_h8312ff29d0
+          - CONFIG: osx_64_python3.9.____cpython
+            SHORT_CONFIG: osx_64_python3.9.____cpython
             UPLOAD_PACKAGES: True
             os: macos
-          - CONFIG: osx_64_gnuradio_extra_pinpython3.10.____cpython
-            SHORT_CONFIG: osx_64_gnuradio_extra_pinpython3.10.____cpython
+          - CONFIG: osx_arm64_python3.10.____cpython
+            SHORT_CONFIG: osx_arm64_python3.10.____cpython
             UPLOAD_PACKAGES: True
             os: macos
-          - CONFIG: osx_64_gnuradio_extra_pinpython3.8.____cpython
-            SHORT_CONFIG: osx_64_gnuradio_extra_pinpython3.8.____cpython
+          - CONFIG: osx_arm64_python3.8.____cpython
+            SHORT_CONFIG: osx_arm64_python3.8.____cpython
             UPLOAD_PACKAGES: True
             os: macos
-          - CONFIG: osx_64_gnuradio_extra_pinpython3.9.____cpython
-            SHORT_CONFIG: osx_64_gnuradio_extra_pinpython3.9.____cpython
-            UPLOAD_PACKAGES: True
-            os: macos
-          - CONFIG: osx_arm64_gnuradio_extra_pin3.9.8python3.10.____cpython
-            SHORT_CONFIG: osx_arm64_gnuradio_extra_pin3.9.8py_h34543de3ae
-            UPLOAD_PACKAGES: True
-            os: macos
-          - CONFIG: osx_arm64_gnuradio_extra_pin3.9.8python3.8.____cpython
-            SHORT_CONFIG: osx_arm64_gnuradio_extra_pin3.9.8py_hbfdd537a70
-            UPLOAD_PACKAGES: True
-            os: macos
-          - CONFIG: osx_arm64_gnuradio_extra_pin3.9.8python3.9.____cpython
-            SHORT_CONFIG: osx_arm64_gnuradio_extra_pin3.9.8py_h873d83297b
-            UPLOAD_PACKAGES: True
-            os: macos
-          - CONFIG: osx_arm64_gnuradio_extra_pinpython3.10.____cpython
-            SHORT_CONFIG: osx_arm64_gnuradio_extra_pinpython3_h67d639e5eb
-            UPLOAD_PACKAGES: True
-            os: macos
-          - CONFIG: osx_arm64_gnuradio_extra_pinpython3.8.____cpython
-            SHORT_CONFIG: osx_arm64_gnuradio_extra_pinpython3_h5c171c2e0c
-            UPLOAD_PACKAGES: True
-            os: macos
-          - CONFIG: osx_arm64_gnuradio_extra_pinpython3.9.____cpython
-            SHORT_CONFIG: osx_arm64_gnuradio_extra_pinpython3_ha204ae6dd3
+          - CONFIG: osx_arm64_python3.9.____cpython
+            SHORT_CONFIG: osx_arm64_python3.9.____cpython
             UPLOAD_PACKAGES: True
             os: macos
     steps:
